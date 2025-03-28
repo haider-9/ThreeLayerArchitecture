@@ -1,0 +1,12 @@
+D:\winsapp\ClassLibrary\bin\Debug\net8.0\ClassLibrary.deps.json
+D:\winsapp\ClassLibrary\bin\Debug\net8.0\ClassLibrary.dll
+D:\winsapp\ClassLibrary\bin\Debug\net8.0\ClassLibrary.pdb
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.csproj.AssemblyReference.cache
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.AssemblyInfoInputs.cache
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.AssemblyInfo.cs
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.dll
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\refint\ClassLibrary.dll
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.pdb
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ref\ClassLibrary.dll
