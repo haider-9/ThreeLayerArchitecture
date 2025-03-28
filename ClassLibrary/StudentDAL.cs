@@ -11,16 +11,17 @@ public class StudentDAL
         return conn.DUI(qry);
     }
 
-    public int updateStudent(StudentProps p)
+    public int updatStudent(StudentProps p)
     {
         string qry = "Update students values('" + p.ID + "','" + p.Name + "','" + p.semester + "'.'" + p.degree + "','" + p.department + "')";
         return conn.DUI(qry);
     }
-    public int DeleteStudent(StudentProps p){
+    public int DeleteStudent(StudentProps p)
+    {
         string qry = "Delete from students where ID='" + p.ID + "'";
         return conn.DUI(qry);
     }
-    public SqlDataReader GetallStudents()
+    public SqlDataReader GetallStudents(StudentProps p)
     {
         string qry = "Select * from students";
         return conn.search(qry);

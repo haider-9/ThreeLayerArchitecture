@@ -22,3 +22,4 @@ D:\winsapp\WinFormsApp\obj\Debug\net8.0-windows\refint\WinFormsApp.dll
 D:\winsapp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.pdb
 D:\winsapp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.genruntimeconfig.cache
 D:\winsapp\WinFormsApp\obj\Debug\net8.0-windows\ref\WinFormsApp.dll
+D:\winsapp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.sourcelink.json

@@ -10,3 +10,4 @@ D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.dll
 D:\winsapp\ClassLibrary\obj\Debug\net8.0\refint\ClassLibrary.dll
 D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.pdb
 D:\winsapp\ClassLibrary\obj\Debug\net8.0\ref\ClassLibrary.dll
+D:\winsapp\ClassLibrary\obj\Debug\net8.0\ClassLibrary.sourcelink.json

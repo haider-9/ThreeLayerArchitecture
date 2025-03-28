@@ -1,6 +1,9 @@
+using System.Data.SqlClient;
+
 namespace WinFormsApp;
 
 public partial class Form1 : Form
+
 {
     public Form1()
     {
@@ -18,29 +21,73 @@ public partial class Form1 : Form
 
     private void BtnInsert_Click(object sender, EventArgs e)
     {
+        StudentProps p = new StudentProps();
 
+        StudentBLL bll = new StudentBLL();
 
+        p.ID = txtId.Text;
+        p.Name = txtName.Text;
+        p.semester = txtSemester.Text;
+        p.degree = txtProgram.Text;
+        p.department = txtDepartment.Text;
+        string msg = bll.Insertstudent(p);
+        MessageBox.Show(msg);
 
     }
 
     private void BtnUpdate_Click(object sender, EventArgs e)
     {
+        StudentProps p = new StudentProps();
+        StudentBLL bll = new StudentBLL();
+
+        p.ID = txtId.Text;
+        p.Name = txtName.Text;
+        p.semester = txtSemester.Text;
+        p.degree = txtProgram.Text;
+        p.department = txtDepartment.Text;
+        string msg = bll.UpdateStudent(p);
+        MessageBox.Show(msg);
 
     }
 
     private void BtnDelete_Click(object sender, EventArgs e)
     {
+        StudentProps p = new StudentProps();
+        StudentBLL bll = new StudentBLL();
+
+        p.ID = txtId.Text;
+        string msg = bll.DeleteStudent(p);
+        MessageBox.Show(msg);
 
     }
 
     private void BtnSearch_Click(object sender, EventArgs e)
     {
+        StudentProps p = new StudentProps();
+
+        StudentBLL bll = new StudentBLL();
+
+        p.ID = txtId.Text;
+        SqlDataReader result = bll.searchallStudent(p);
+        if (result.HasRows)
+        {
+            while (result.Read())
+            {
+                txtName.Text = result["Name"].ToString();
+                txtSemester.Text = result["sem"].ToString();
+                txtProgram.Text = result["Degree"].ToString();
+                txtDepartment.Text = result["program"].ToString();
+            }
+        }
 
     }
 
     private void BtnSearchSpecific_Click(object sender, EventArgs e)
     {
-
+        StudentProps p = new StudentProps();
+        StudentBLL bll = new StudentBLL();
+        p.ID = txtId.Text;
+        bll.searchStudentById(p);
 
     }
 }
