@@ -6,7 +6,7 @@ public class DBconn
     public SqlConnection conn;
     public DBconn()
     {
-        conn = new SqlConnection(@"Data Source=SAMREEN-ASHRAF\MSSQLSERVER01;Database=StudentDB;Initial Catalog=True");
+        conn = new SqlConnection(@"Data Source=SAMREEN-ASHRAF\MSSQLSERVER01;Initial Catalog=StudentDB;Integrated Security=True;");
     }
     public int DUI(string qry)
     {
@@ -31,5 +31,5 @@ public class DBconn
         adp.Fill(dt);
         return dt;
     }
-   
+
 }

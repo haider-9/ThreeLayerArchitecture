@@ -1,41 +1,50 @@
 using System.Data;
 using System.Data.SqlClient;
 
-public class StudentBLL{
-    StudentDAL dl=new StudentDAL();
-    public string Insertstudent(StudentProps p){
-        int res=dl.insertStudent(p);
-        if(res>0)
+public class StudentBLL
+{
+    StudentDAL dl = new StudentDAL();
+    public string Insertstudent(StudentProps p)
+    {
+        int res = dl.insertStudent(p);
+        if (res > 0)
             return "Student inserted successfully";
-        
-        else{
+
+        else
+        {
             return "Failed to insert student";
         }
     }
-    public string DeleteStudent(StudentProps p){
-        int res=dl.DeleteStudent(p);
-        if(res>0)
+    public string DeleteStudent(StudentProps p)
+    {
+        int res = dl.DeleteStudent(p);
+        if (res > 0)
             return "Student deleted successfully";
-        
-        else{
+
+        else
+        {
             return "Failed to delete student";
         }
     }
-    public string UpdateStudent(StudentProps p){
-        int res=dl.updatStudent(p);
-        if(res>0)
+    public string UpdateStudent(StudentProps p)
+    {
+        int res = dl.updatStudent(p);
+        if (res > 0)
             return "Student updated successfully";
-        
-        else{
+
+        else
+        {
             return "Failed to update student";
         }
     }
-    public SqlDataReader searchallStudent(StudentProps p){
-        SqlDataReader rdr=dl.GetallStudents(p);
-        return rdr;
+    public DataTable searchallStudent()
+    {
+        DataTable dt = dl.GetallStudents();
+        return dt;
     }
-    public SqlDataReader searchStudentById(StudentProps p){
-        SqlDataReader rdr=dl.GetStudentByID(p);
+    public DataTable searchStudentById(StudentProps p)
+    {
+        DataTable rdr = dl.GetStudentByID(p);
         return rdr;
     }
 

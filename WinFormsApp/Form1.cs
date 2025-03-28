@@ -1,3 +1,4 @@
+using System.Data;
 using System.Data.SqlClient;
 
 namespace WinFormsApp;
@@ -8,6 +9,7 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
+        SetupEventHandlers();
     }
     private void SetupEventHandlers()
     {
@@ -63,22 +65,10 @@ public partial class Form1 : Form
 
     private void BtnSearch_Click(object sender, EventArgs e)
     {
-        StudentProps p = new StudentProps();
 
         StudentBLL bll = new StudentBLL();
-
-        p.ID = txtId.Text;
-        SqlDataReader result = bll.searchallStudent(p);
-        if (result.HasRows)
-        {
-            while (result.Read())
-            {
-                txtName.Text = result["Name"].ToString();
-                txtSemester.Text = result["sem"].ToString();
-                txtProgram.Text = result["Degree"].ToString();
-                txtDepartment.Text = result["program"].ToString();
-            }
-        }
+        DataTable result = bll.searchallStudent();
+        dataGridView1.DataSource = result;
 
     }
 
@@ -87,7 +77,9 @@ public partial class Form1 : Form
         StudentProps p = new StudentProps();
         StudentBLL bll = new StudentBLL();
         p.ID = txtId.Text;
-        bll.searchStudentById(p);
+        DataTable dt=bll.searchStudentById(p);
+        dataGridView1.DataSource = dt;
+
 
     }
 }
